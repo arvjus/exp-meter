@@ -46,10 +46,10 @@ Before measuring, focus the enlarger and set the aperture you intend to use for 
 
 ### Density Mode
 
-Density mode can be used to measure the optical density or filter factor of photographic materials, such as neutral-density or multigrade filters.
+Density mode can be used to measure the optical density or filter factor of photographic materials, such as neutral-density filters.
 
 Illuminate the sensor with a constant light source.
-Press and hold the measurement button for approximately 2 seconds to reset the reference level (0 EV / 0 optical density).
+Press the measurement button to reset the reference level (0 EV / 0 optical density).
 Insert the material to be measured between the light source and the sensor.
 The display shows both the optical density and the corresponding EV difference.
 

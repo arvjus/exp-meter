@@ -151,5 +151,20 @@ Using EV allows exposure differences to be expressed as simple additions and sub
 
 ## Gallery
 
+Device construction:
+
+![top](https://github.com/arvjus/exp-meter/blob/main/gallery/top.jpeg)
+![front](https://github.com/arvjus/exp-meter/blob/main/gallery/front.jpeg)
+![back](https://github.com/arvjus/exp-meter/blob/main/gallery/back.jpeg)
+![inside](https://github.com/arvjus/exp-meter/blob/main/gallery/inside.jpeg)
+
+Contrast / Filter function for Ilford Multigrade RC V papper:
+
+![tfilter_rc5.pngop](https://github.com/arvjus/exp-meter/blob/main/gallery/filter_rc5.png.jpeg)
+
+Test strips, created during calibration process:
+
+![test-strips.pngop](https://github.com/arvjus/exp-meter/blob/main/gallery/test-strips.png.jpeg)
+
 
 

@@ -34,7 +34,7 @@ Using these reference points, the calculator maps the negative to the full print
 ## Hardware
 
 * Adafruit TSL2561 Sensor
-* Hitachi HD44780 LCD chipset + I2C
+* Hitachi HD44780 LCD chipset
 * ATmega328(P) MCU - most of Arduino boards will do the job
 
 

@@ -160,7 +160,7 @@ Device construction:
 
 Contrast / Filter function for Ilford Multigrade RC V papper:
 
-![tfilter_rc5](https://github.com/arvjus/exp-meter/blob/main/gallery/filter_rc5.jpeg)
+![tfilter_rc5](https://github.com/arvjus/exp-meter/blob/main/gallery/filter_rc5.png)
 
 Test strips, created during calibration process:
 

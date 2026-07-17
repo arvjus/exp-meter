@@ -4,7 +4,7 @@
 
 Anyone who prints black-and-white photographs in a darkroom is familiar with making test strips to determine the correct exposure and paper grade.
 
-Before starting this project, I asked myself a simple question: **if I always use the same enlarger, paper, developer, and filters, why repeat the same process for every print?**
+Before starting this project, I asked myself a simple question: **if I always use the same paper, developer, and filters, why repeat the same process for every print?**
 
 
 ## What is it for

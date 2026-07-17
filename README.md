@@ -151,6 +151,10 @@ Using EV allows exposure differences to be expressed as simple additions and sub
 
 ## Gallery
 
+These prints were made using the exposure and filter settings calculated by the device:
+
+![samples](https://github.com/arvjus/exp-meter/blob/main/gallery/samples.jpeg)
+
 Device construction:
 
 ![top](https://github.com/arvjus/exp-meter/blob/main/gallery/top.jpeg)

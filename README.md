@@ -151,7 +151,10 @@ Using EV allows exposure differences to be expressed as simple additions and sub
 
 ## Gallery
 
-These prints were made using the exposure and filter settings calculated by the device:
+The prints shown below are first prints made directly from the values calculated by the device, without using test strips or making any manual adjustments.
+
+They are slightly flat, although the latest firmware revision includes improvements that should produce better tonal separation.
+
 
 ![samples](https://github.com/arvjus/exp-meter/blob/main/gallery/samples.jpeg)
 

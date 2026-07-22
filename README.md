@@ -107,9 +107,9 @@ pip3 install numpy pandas sklearn matplotlib seaborn
 
 ## Known Issues During Calibration and How to Avoid Them
 
-### Avoid measurements below 0.8 EV
+### Avoid measurements below 0.5 EV
 
-Using an ND filter improves the accuracy of highlight measurements by increasing the exposure time. However, if the light reaching the sensor is below **0.8 EV**, the sensor becomes noticeably less accurate. This can introduce errors into the calibration and affect all subsequent exposure calculations.
+Using an ND filter improves the accuracy of highlight measurements by increasing the exposure time. However, if the light reaching the sensor is below **0.5 EV**, the sensor becomes noticeably less accurate. This can introduce errors into the calibration and affect all subsequent exposure calculations.
 
 If necessary, increase the enlarger brightness rather than measuring at very low light levels.
 

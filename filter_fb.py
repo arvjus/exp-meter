@@ -2,61 +2,54 @@
 
 import numpy as np
 import pandas as pd
-from sklearn import linear_model, metrics
 import matplotlib.pyplot as plt
+from sklearn import linear_model, metrics
 from statistics import mean
+
+def mkFilterFn(c):
+    print(f"""
+// {c[0]:.9f}  {c[1]:.9f}  {c[2]:.9f}
+float calculate_filter_fb(float ev)
+{{
+    float filter = ({c[0]:.9f}f * ev + {c[1]:.9f}f) * ev + {c[2]:.9f}f;
+
+    filter = roundf(filter * 2.0f) * 0.5f;
+
+    if (filter < 0.0f) return 0.0f;
+    if (filter > 5.0f) return 5.0f;
+
+    return filter;
+}}
+""")
 
 # read dataset, split features/targets
 data = pd.read_csv("calibration_fb.csv", index_col=False)
-data['contrast_ev'] = np.log(data['exp_l']/data['exp_h'])/np.log(2)-1.68
+data['contrast_ev'] = np.log(data['exp_l']/data['exp_h'])/np.log(2)
 print(data)
 
+# fit model
+coef = np.polyfit(data["contrast_ev"], data["filter"], 2)
 
-def scatter():
-    plt.figure("Scatter", figsize=(12, 5))
+pred = np.polyval(coef, data["contrast_ev"])
+pred_round = np.round(pred * 2) / 2
 
-    plt.title("Filter")
-    plt.grid()
-    plt.scatter(data.iloc[:,3], data.iloc[:,0], label='contr', color='g')
-    plt.legend(loc='upper right')
+print(pd.DataFrame({
+    "actual": data["filter"],
+    "pred": pred,
+    "rounded": pred_round,
+    "error": pred_round - data["filter"]
+}))
 
-    m = (((mean(data.iloc[:,3]) * mean(data.iloc[:,0])) - mean(data.iloc[:,3] * data.iloc[:,0])) /
-         ((mean(data.iloc[:,3]) * mean(data.iloc[:,3])) - mean(data.iloc[:,3] * data.iloc[:,3])))
-    b = mean(data.iloc[:,0]) - m * mean(data.iloc[:,3])
-    plt.plot(data.iloc[:,3], [(m*x)+b for x in data.iloc[:,3]])
-    plt.show()
+# test extrapolation
+ev = np.linspace(1.2, 4.5, 200)   # extend below your lowest measured EV
+filter = np.polyval(coef, ev)
 
-def runLinearRegression(X, y):
-    regr = linear_model.LinearRegression()
-    model = regr.fit(X, y)
-    return (model.intercept_,) + tuple(model.coef_), model.predict(X)
+# plot graph
+plt.figure(figsize=(8,6))
+plt.scatter(data["contrast_ev"], data["filter"], color="red", label="Measured")
+plt.plot(ev, filter, label="Quadratic")
+plt.grid()
+plt.legend()
+plt.show()
 
-def runRidge(X, y, alpha):
-    regr = linear_model.Ridge(alpha=alpha)
-    model = regr.fit(X, y)
-    return (model.intercept_,) + tuple(model.coef_), model.predict(X)
-
-def mkFilter2Fn(coef):
-    print("""
-    // %f   %f
-    float calculate_filter(float ev_contrast)
-    {
-      float filter = round((%f + ev_contrast * %f) * 2) / 2.0f;
-      return filter < 0 ? 0.0f : filter > 5 ? 5.0f : filter;
-    }
-    """ % (coef + coef))
-
-
-
-#scatter()
-
-
-lr_coef, lr_pred = runLinearRegression(data.iloc[:,3:4], data.iloc[:,0])
-#lr_coef, lr_pred = runRidge(data.iloc[:,3:4], data.iloc[:,0], 0.1)
-print("rmse:  ", np.sqrt(metrics.mean_squared_error(data.iloc[:,0], lr_pred)))
-print("score: ", metrics.r2_score(data.iloc[:,0], lr_pred))
-print(data.iloc[:,0] - lr_pred)
-print(lr_coef)
-print()
-
-mkFilter2Fn(lr_coef)
+mkFilterFn(coef)

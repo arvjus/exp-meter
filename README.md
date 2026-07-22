@@ -165,8 +165,12 @@ Device construction:
 ![back](https://github.com/arvjus/exp-meter/blob/main/gallery/back.jpeg)
 ![inside](https://github.com/arvjus/exp-meter/blob/main/gallery/inside.jpeg)
 
-Contrast / Filter function for Ilford Multigrade RC V papper:
+Contrast / Filter functions
 
+Ilford Multigrade FB classic papper:
+![tfilter_fb](https://github.com/arvjus/exp-meter/blob/main/gallery/filter_fb.png)
+
+Ilford Multigrade RC V papper:
 ![tfilter_rc5](https://github.com/arvjus/exp-meter/blob/main/gallery/filter_rc5.png)
 
 Test strips, created during calibration process:

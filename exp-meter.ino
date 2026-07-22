@@ -1,4 +1,4 @@
-// Copyright (c) 2022, Arvid Juskaitis (arvydas.juskaitis@gmail.com)
+// Copyright (c) 2022-2026, Arvid Juskaitis (arvydas.juskaitis@gmail.com)
 // no bootloader, use programmer to load
 
 #include <LiquidCrystal.h>
@@ -180,22 +180,42 @@ float calculate_filter_rc5(float ev)
   return filter;
 }
 
-// 6.761117   -1.380379
-float calculate_filter_fb(float ev_contrast)
+// 0.082128023  -2.105486282  7.656978866
+float calculate_filter_fb(float ev)
 {
-  float filter = round((6.761117 + ev_contrast * -1.380379) * 2) / 2.0f;
-  return filter < 0 ? 0.0f : filter > 5.0 ? 5.0f : filter;
+    float filter = (0.082128023f * ev + -2.105486282f) * ev + 7.656978866f;
+
+    filter = roundf(filter * 2.0f) * 0.5f;
+
+    if (filter < 0.0f) return 0.0f;
+    if (filter > 5.0f) return 5.0f;
+
+    return filter;
 }
+
+// To clalculate exposure, 
+// 3.07 is the EV value used in calibration for getting these exp times- measuring without any filter
 
 uint16_t calculate_exposure_rc5(float filter, float ev_min)
 {
-  // 3.07 is the EV value used in calibration for getting these exp times- measuring without any filter
-  static float exp_times[] = { 2.2305f, 2.3101f, 2.3500f, 2.3898f, 2.5491f, 2.7084f, 2.7881f, 2.8678f, 2.9474f, 5.5762f, 5.8152f, 6.0542f };
+  static float exp_times[] = { 
+    2.3101f, 2.3500f,   // 0
+    2.3898f, 2.5491f,   // 1
+    2.7084f, 2.7881f,   // 2
+    2.8678f, 2.9474f,   // 3
+    5.5762f, 5.8152f,   // 4
+    6.0542f };          // 5
   return round(exp_times[int(filter * 2)] * pow(2, (3.07 - ev_min)));
 }
 
 uint16_t calculate_exposure_fb(float filter, float ev_min)
 {
-  static float exp_times[] = {3.1, 3.2, 3.3, 3.4, 3.5, 3.7, 3.9, 4.1, 7.0, 7.0, 7.0};
-  return round(exp_times[int(filter * 2)] / pow(2, ev_min - 2.38));
+  static float exp_times[] = { 
+    2.3898f, 2.3898f,   // 0
+    2.3898f, 2.3898f,   // 1
+    2.3898f, 2.5491f,   // 2
+    2.7084f, 2.8678f,   // 3
+    4.7796f, 4.9588f,   // 4
+    5.1779f };          // 5
+  return round(exp_times[int(filter * 2)] * pow(2, (3.07 - ev_min)));
 }

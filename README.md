@@ -25,8 +25,8 @@ The calculator always determines the contrast filter first, followed by the expo
 
 The calibration is based on two reference exposure points for the selected paper:
 
-* the exposure at which the lightest area of the print becomes pure white with no remaining detail;
-* the exposure at which the darkest area of the print becomes pure black with no remaining detail.
+* the exposure at which the brightest areas of the print first show detail, and
+* the exposure at which the darkest areas lose all detail and become solid black.
 
 Using these reference points, the calculator maps the negative to the full printable tonal range of the paper, producing a well-balanced print with little or no need for test strips. After the automatic calculation, both exposure and contrast can be fine-tuned by approximately **±2 EV** to achieve the desired artistic result.
 

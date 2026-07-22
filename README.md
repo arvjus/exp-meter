@@ -105,22 +105,6 @@ After all measurements have been collected, the results are stored in a CSV file
 pip3 install numpy pandas sklearn matplotlib seaborn
 
 
-## Known Issues During Calibration and How to Avoid Them
-
-### Avoid measurements below 0.5 EV
-
-Using an ND filter improves the accuracy of highlight measurements by increasing the exposure time. However, if the light reaching the sensor is below **0.5 EV**, the sensor becomes noticeably less accurate. This can introduce errors into the calibration and affect all subsequent exposure calculations.
-
-If necessary, increase the enlarger brightness rather than measuring at very low light levels.
-
-### Avoid long exposures when calibrating dark tones
-
-Shadow calibration exposures should preferably remain below **45 seconds**. Longer exposures are increasingly affected by **reciprocity failure**, causing the measured response of the paper to deviate from the expected value.
-
-If shadow exposures become too long, increase the enlarger illumination or open the lens aperture during calibration to keep the exposure time within a reliable range.
-
-
-
 ## Tips and Tricks, Final Thoughts
 
 * **Reciprocity failure compensation** would be a useful future enhancement. At present, long exposure corrections must be applied manually when required.

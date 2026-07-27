@@ -144,10 +144,10 @@ They are slightly flat, although the latest firmware revision includes improveme
 
 Device construction:
 
-![top](https://github.com/arvjus/exp-meter/blob/main/gallery/top.jpeg)
-![front](https://github.com/arvjus/exp-meter/blob/main/gallery/front.jpeg)
-![back](https://github.com/arvjus/exp-meter/blob/main/gallery/back.jpeg)
-![inside](https://github.com/arvjus/exp-meter/blob/main/gallery/inside.jpeg)
+![top](https://github.com/arvjus/exp-meter/blob/main/gallery/top_v10.jpeg)
+![front](https://github.com/arvjus/exp-meter/blob/main/gallery/front_v10.jpeg)
+![back](https://github.com/arvjus/exp-meter/blob/main/gallery/back_v10.jpeg)
+![inside](https://github.com/arvjus/exp-meter/blob/main/gallery/inside_v10.jpeg)
 
 Contrast / Filter functions
 

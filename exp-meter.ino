@@ -1,4 +1,5 @@
 // Copyright (c) 2022-2026, Arvid Juskaitis (arvydas.juskaitis@gmail.com)
+// Version 1.0
 // no bootloader, use programmer to load
 
 #include <LiquidCrystal.h>
@@ -140,7 +141,7 @@ float getLuminosity()
     delay(110);
     tsl.getLuminosity(&broadband, &infrared);
 
-    if (broadband >= 16)
+    if (broadband >= 8)
         return (float)broadband;
 
     // Low light: longer integration

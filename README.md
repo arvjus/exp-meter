@@ -57,7 +57,7 @@ The display shows both the optical density and the corresponding EV difference.
 
 Exposure mode is used to determine the correct multigrade filter and printing exposure.
 
-1. Press and hold the measurement button for approximately **2 seconds** to start a new measurement. This clears the previously stored minimum and maximum values.
+1. Press and hold the measurement button for approximately **3 seconds** to start a new measurement. This clears the previously stored minimum and maximum values.
 2. Focus the enlarger and set the desired printing aperture.
 3. Move the sensor over different areas of the projected negative. The display continuously shows the current EV value.
 4. Press the measurement button to record a reading. Repeat this for several highlights and shadows. The calculator automatically keeps the **lowest** and **highest** measured EV values.
@@ -67,10 +67,12 @@ Exposure mode is used to determine the correct multigrade filter and printing ex
 
 After the measurements have been completed, the calculated result can be adjusted without repeating the measurements.
 
-Use the potentiometer to select the desired compensation value (**−1, −0.5, 0, +0.5 or +1 EV**) and press the corresponding button:
+Press the corresponding button and use the rotary knob to select the desired compensation value (**−1.5, .. +1.5**):
 
-* **Brightness compensation** adjusts the exposure time.
-* **Contrast compensation** adjusts the selected multigrade filter.
+* **(H)ighlights** adjusts the exposure time.
+* **(S)shadows** adjusts the selected multigrade filter.
+
+Press rotary switch to return to Exposure mode.
 
 The selected compensation remains active until a new measurement is started by resetting the stored minimum and maximum values.
 
@@ -144,10 +146,10 @@ They are slightly flat, although the latest firmware revision includes improveme
 
 Device construction:
 
-![top](https://github.com/arvjus/exp-meter/blob/main/gallery/top_v10.jpeg)
-![front](https://github.com/arvjus/exp-meter/blob/main/gallery/front_v10.jpeg)
-![back](https://github.com/arvjus/exp-meter/blob/main/gallery/back_v10.jpeg)
-![inside](https://github.com/arvjus/exp-meter/blob/main/gallery/inside_v10.jpeg)
+![top](https://github.com/arvjus/exp-meter/blob/main/gallery/top_v11.jpeg)
+![front](https://github.com/arvjus/exp-meter/blob/main/gallery/front_v11.jpeg)
+![back](https://github.com/arvjus/exp-meter/blob/main/gallery/back_v11.jpeg)
+![inside](https://github.com/arvjus/exp-meter/blob/main/gallery/inside_v11.jpeg)
 
 Contrast / Filter functions
 

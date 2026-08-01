@@ -53,7 +53,7 @@ Press the measurement button to reset the reference level (0 EV / 0 optical dens
 Insert the material to be measured between the light source and the sensor.
 The display shows both the optical density and the corresponding EV difference.
 
-## Exposure Mode
+### Exposure Mode
 
 Exposure mode is used to determine the correct multigrade filter and printing exposure.
 
@@ -75,7 +75,7 @@ Measurements can be recorded in two ways:
 
 The calculator determines the optimal multigrade filter from the measured tonal range and then calculates the required exposure time.
 
-### Optional Brightness and Contrast Compensation
+#### Optional Brightness and Contrast Compensation
 
 When using the **Compensation** method, the calculated result can be adjusted without repeating the measurements.
 

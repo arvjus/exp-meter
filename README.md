@@ -53,29 +53,40 @@ Press the measurement button to reset the reference level (0 EV / 0 optical dens
 Insert the material to be measured between the light source and the sensor.
 The display shows both the optical density and the corresponding EV difference.
 
-### Exposure Mode
+## Exposure Mode
 
 Exposure mode is used to determine the correct multigrade filter and printing exposure.
 
-1. Press and hold the measurement button for approximately **3 seconds** to start a new measurement. This clears the previously stored minimum and maximum values.
-2. Focus the enlarger and set the desired printing aperture.
-3. Move the sensor over different areas of the projected negative. The display continuously shows the current EV value.
-4. Press the measurement button to record a reading. Repeat this for several highlights and shadows. The calculator automatically keeps the **lowest** and **highest** measured EV values.
-5. The calculator determines the optimal multigrade filter from the measured EV range and then calculates the required exposure time.
+Select the desired exposure method using the **Method** switch:
 
-#### Optional Brightness and Contrast Compensation
+* **Compensation** (legacy) – calculates exposure from the measured tonal range and allows brightness and contrast adjustments after the measurement.
+* **Zone** – calculates exposure from measured shadow and highlight anchor points, which can be assigned to the desired print zones.
 
-After the measurements have been completed, the calculated result can be adjusted without repeating the measurements.
+Press and hold the measurement button for approximately 3 seconds to start a new measurement. This clears the previously stored values.
 
-Press the corresponding button and use the rotary knob to select the desired compensation value (**−1.5, .. +1.5**):
+Focus the enlarger and set the desired printing aperture.
 
-* **(H)ighlights** adjusts the exposure time.
-* **(S)shadows** adjusts the selected multigrade filter.
+Move the sensor over different areas of the projected negative. The display continuously shows the current EV value.
 
-Press rotary switch to return to Exposure mode.
+Measurements can be recorded in two ways:
 
-The selected compensation remains active until a new measurement is started by resetting the stored minimum and maximum values.
+* In **Exposure** display mode, press the measurement button over several highlights and shadows. The calculator automatically stores the minimum and maximum EV values (legacy behaviour).
+* In **Highlights** and **Shadows** submodes, press the measurement button to record one or more measurements for each anchor point. The recorded values are averaged and used as the highlight and shadow anchors.
 
+The calculator determines the optimal multigrade filter from the measured tonal range and then calculates the required exposure time.
+
+### Optional Brightness and Contrast Compensation
+
+When using the **Compensation** method, the calculated result can be adjusted without repeating the measurements.
+
+Press the corresponding button and use the rotary knob to select the desired compensation value (−2.0 ... +2.0 EV):
+
+* **Highlights** – adjusts the exposure time.
+* **Shadows** – adjusts the selected multigrade filter.
+
+Press the rotary switch to return to Exposure mode.
+
+The selected compensation remains active until a new measurement is started by resetting the stored values.
 
 ## Calibration
 
